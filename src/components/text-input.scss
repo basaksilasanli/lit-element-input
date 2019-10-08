@@ -1,0 +1,72 @@
+$font: 'Roboto';
+
+$label-color: #7a8f98;
+$text-color: #333333;
+$placeholder-color: #ababab;
+$background-color: #f7f9f9;
+
+$font-size: 14px;
+
+:host {
+  display: inline-block;
+}
+
+
+.label {
+  font-family: $font;
+  font-weight: 700;
+  font-size: 12px;
+  color: $label-color;
+
+}
+
+.container {
+  position: relative;
+  max-width: fit-content;
+  .input {
+    height: 34px;
+    width: 340px;
+    border: 1px solid #dbe0df;
+    font-size: $font-size;
+    border-radius: 2px;
+    padding-right: 33px;
+    padding-left: 10px;
+    
+  
+    &::placeholder, &:disabled {
+      color: $placeholder-color;
+    
+    }
+    &:focus {
+      outline: 0;
+      border: 1px solid #2ca3aa;
+      box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3);
+    }
+    &:disabled, &:read-only{
+     background:$background-color;
+    }
+    
+     
+  }
+  .closeIcon {
+    width: 18px;
+    color: $placeholder-color;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    &:hover {
+      cursor: pointer;
+    }
+    
+  }
+}
+
+.disabledButton, .readOnlyButton {
+  margin: 5px;
+  padding: 5px;
+}
+
+
+
+
+
